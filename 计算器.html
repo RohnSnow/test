@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background: #000000;
+				overflow: hidden;
+			}
+			body>div,span{
+				position: relative;
+				top: 83px;
+				float: right;
+			}
+			.xianshi{
+				color: white;
+				font-size: 100px;
+				right: 10px;
+			}
+			
+			.jianpan{
+				overflow: hidden;
+				position: absolute;
+				top: 197px;
+			}
+			.jianpan>div{
+				width: 93px;
+				height: 93px;
+				background: #CCCCCC;
+				border-top: 1px solid black;
+				line-height: 93px;
+				text-align: center;
+				font-size: 50px;
+				float:left;
+			}
+			.jianpan>div:nth-child(4n-2){
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+			}
+			.jianpan>div:nth-child(4n){
+				border-left: 1px solid black;
+				background: orangered;
+			}
+			.jianpan>.jp17{
+				width: 187px;
+			}
+			.jianpan>.jp19{
+				background: orangered;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="xianshi">0</span>
+		<div class="jianpan">
+			<div class="jp jp1">AC</div>
+			<div class="jp jp2">+/-</div>
+			<div class="jp jp3">%</div>
+			<div class="jp jp4">÷</div>
+			<div class="jp jp5">7</div>
+			<div class="jp jp6">8</div>
+			<div class="jp jp7">9</div>
+			<div class="jp jp8">×</div>
+			<div class="jp jp9">4</div>
+			<div class="jp jp10">5</div>
+			<div class="jp jp11">6</div>
+			<div class="jp jp12">-</div>
+			<div class="jp jp13">1</div>
+			<div class="jp jp14">2</div>
+			<div class="jp jp15">3</div>
+			<div class="jp jp16">+</div>
+			<div class="jp jp17">0</div>
+			<div class="jp jp18">.</div>
+			<div class="jp jp19">=</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var jp = document.querySelectorAll(".jp")
+		var jianpan  = document.querySelector(".jianpan")
+		var xsq = document.querySelector(".xianshi")
+		
+		
+		//清零点击事件
+		jp[0].onclick = function(){
+			xsq.innerText=0
+			index=0
+			zj=0
+		}
+		
+		var zj//作为判断的中间变量
+		
+		// 数字部分点击事件
+		shuzi()
+		function shuzi(){
+			jp[4].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[5].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[6].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[8].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[9].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[10].onclick=function(){
+				
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[12].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					console.log(xsq.innerText)
+					xsq.innerText=this.innerText;
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[13].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[14].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+					xsd=0
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+			jp[16].onclick=function(){
+				if(xsd==1){
+					xsq.innerText+=this.innerText
+				}else if(xsq.innerText==0 || zj==1){
+					xsq.innerText=this.innerText
+					zj=0
+				}else{
+					xsq.innerText+=this.innerText
+				}
+				hy()
+			}
+		}
+		
+		//符号 计算部分点击事件
+		var index
+		var ysf
+		jp[2].onclick = function(){
+			xsq.innerText=parseFloat(xsq.innerText)
+			if(xsq.innerText){
+				index = xsq.innerText
+			}
+			hy()
+			this.style.background = "orange"
+			zj = 1;
+			shuzi()
+			jp[18].onclick=function(){
+				xsq.innerText=(index%xsq.innerText).toFixed(8)
+				xsq.innerText=parseFloat(xsq.innerText)
+			}
+		}
+		jp[3].onclick = function(){
+			xsq.innerText=parseFloat(xsq.innerText)
+			if(xsq.innerText){
+				index = xsq.innerText
+			}
+			hy()
+			this.style.background = "orange"
+			zj = 1;
+			shuzi()
+			jp[18].onclick=function(){
+				xsq.innerText=(index/xsq.innerText).toFixed(8)
+				xsq.innerText=parseFloat(xsq.innerText)
+			}
+		}
+		jp[7].onclick = function(){
+			xsq.innerText=parseFloat(xsq.innerText)
+			if(xsq.innerText){
+				index = xsq.innerText
+			}
+			hy()
+			this.style.background = "orange"
+			zj = 1;
+			shuzi()
+			jp[18].onclick=function(){
+				xsq.innerText=(index*xsq.innerText).toFixed(8)
+				xsq.innerText=parseFloat(xsq.innerText)
+			}
+		}
+		jp[11].onclick = function(){
+			xsq.innerText=parseFloat(xsq.innerText)
+			if(xsq.innerText){
+				index = xsq.innerText
+			}
+			hy()
+			this.style.background = "orange"
+			zj = 1;
+			shuzi()
+			jp[18].onclick=function(){
+				xsq.innerText=(index-xsq.innerText).toFixed(8)
+				xsq.innerText=parseFloat(xsq.innerText)
+			}
+		}
+		jp[15].onclick = function(){
+//			xsq.innerText=parseFloat(xsq.innerText)
+			if(xsq.innerText){
+				index = xsq.innerText
+			}
+			hy()
+			this.style.background = "orange"
+			zj = 1;
+			shuzi()
+			jp[18].onclick=function(){
+				xsq.innerText=(parseFloat(index) + parseFloat(xsq.innerText)).toFixed(8)
+				xsq.innerText=parseFloat(xsq.innerText)
+			}
+		}
+		
+		var xsd
+		//小数点
+		jp[17].onclick = function(){
+			console.log(xsq.innerText.indexOf("."))
+			if(xsq.innerText.indexOf(".")>=0){
+				xsq.innerText = xsq.innerText
+			}else{
+				xsq.innerText += "."
+				xsd = 1
+			}
+			
+			
+		}
+		
+		
+		//符号背景色还原
+		function hy(){
+			jp[2].style.background = "#ccc"
+			jp[3].style.background = "orangered"
+			jp[7].style.background = "orangered"
+			jp[11].style.background = "orangered"
+			jp[15].style.background = "orangered"
+		}
+		
+		
+		
+		
+	</script>
+</html>
