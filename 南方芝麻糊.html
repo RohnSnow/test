@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<title></title>
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				overflow: hidden;
+			}
+			.loading{
+				width: 100vw;
+				height: 100vh;
+				background: url(img/loading/bg.png) no-repeat;
+				background-size: 100vw 100vh;
+				position: relative;
+				
+			}
+			.loading>.houzi{
+				position: absolute;
+				width: 100vw;
+				height: 100vh;
+				background: url(img/loading/hou1.png) no-repeat;
+				background-size: 100% ;
+				animation: load 0.6s infinite;
+			}
+			@-webkit-keyframes load{
+				25%{
+					background: url(img/loading/hou1.png) no-repeat;
+					background-size: 100% ;
+				}
+				50%{
+					background: url(img/loading/hou2.png) no-repeat;
+					background-size: 100% ;
+				}
+				75%{
+					background: url(img/loading/hou3.png) no-repeat;
+					background-size: 100% ;
+				}
+			}
+			.loading>p{
+				position: absolute;
+				color: #FCDB08;
+				margin-left: 50%;
+				margin-top: 52vh;
+				transform: translateX(-50%);
+			}
+			.loading>.p1{
+				margin-top: 57vh;
+			}
+			.wrap{
+				width: 100vw;
+				position: relative;
+			}
+			.wrap>div{
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				overflow: hidden;
+			}
+			.wrap>div>img{
+				position: absolute;
+			}
+			.con1{
+				background: url(img/page1/背景1.jpg);
+				background-size: 100vw 100vh;
+				background-repeat: no-repeat;
+			}
+			.nfzmh{
+				width: 100vw;
+			}
+			.monkey{
+				width: 40vw;
+				top: 68vh;
+				left: 5vw;
+				animation: dong 2s linear infinite 0s;
+			}
+			@-webkit-keyframes dong{
+				50%{
+					top: 70vh;
+				}
+				100%{
+					top: 68vh;
+				}
+			}
+			.xzs{
+				width: 100vw;
+				top: 80vh;
+			}
+			.con2{
+				background: url(img/page2/背景.png);
+				background-size: 100vw 100vh;
+				background-repeat: no-repeat;
+			}
+			.go{
+				width: 100vw;
+				top: 70vh;
+			}
+			.con3{
+				background: url(img/page3/提问背景.png);
+				background-size: 100vw 100vh;
+			}
+			.question{
+				width: 70vw;
+				height: 10vh;
+				position: absolute;
+				left: 23vw;
+				top: 10vh;
+				color: rgb(80, 46, 53);
+				font-weight: bold;
+			}
+			.answer1{
+				width: 75vw;
+				height: 8vh;
+				position: absolute;
+				left: 19vw;
+				top: 47.5vh;
+			}
+			.answer2{
+				width: 75vw;
+				height: 8vh;
+				position: absolute;
+				left: 19vw;
+				top: 59.2vh;
+			}
+			.answer3{
+				width: 75vw;
+				height: 8vh;
+				position: absolute;
+				left: 19vw;
+				top: 70.7vh;
+			}
+			.answer4{
+				width: 75vw;
+				height: 8vh;
+				position: absolute;
+				left: 19vw;
+				top: 82.5vh;
+			}
+			.con3>div>p{
+				float: left;
+			}
+			.icon{
+				width: 44vw;
+				height: 20vh;
+				position: absolute;
+				top: 25vh;
+				left: 28vw;
+				background-size: 44vw 20vh;
+			}
+			.answer{
+				width: 60vw;
+				height: 100%;
+				color: rgb(80, 46, 53);
+				text-align: center;
+				line-height: 8vh;
+				font-weight: bolder;
+			}
+			.judge{
+				margin-top: 0.5vh;
+				width: 13vw;
+				height: 100%;
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+			.con4{
+				background: url(img/背景.JPEG);
+				background-size: 100vw 100vh;
+				overflow: hidden;
+			}
+			.defen{
+				width: 100vw;
+				height: 100vh;
+			}
+			.con4>div{
+				width: 6vw;
+				height: 5vh;
+				position: absolute;
+				line-height: 5vh;
+				font-size: 8vw;
+				text-align: center;
+			}
+			.f1{
+				top: 28.5vh;
+				left: 36.8vw;
+				color: yellow;
+			}
+			.f2{
+				top: 28.5vh;
+				left: 71.5vw;
+				color: yellow;
+			}
+			.f3{
+				top: 44.5vh;
+				left: 42vw;
+			}
+			.con4>.zw{
+				width: 43vw;
+				height: 13vh;
+				position: absolute;
+				background: url(img/page4/再玩.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				top: 87vh;
+				left: 2vw;
+			}
+			.con4>.zw{
+				width: 43vw;
+				height: 13vh;
+				position: absolute;
+				background: url(img/page4/再玩.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				top: 87vh;
+				left: 2vw;
+			}
+			.con4>.hphy{
+				width: 43vw;
+				height: 13vh;
+				position: absolute;
+				background: url(img/page4/呼朋唤友.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				top: 87vh;
+				left: 100vw;
+			}
+			.con4>.cj{
+				width: 43vw;
+				height: 13vh;
+				position: absolute;
+				background: url(img/page4/抽奖.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				top: 87vh;
+				left: 100vw;
+			}
+			.con4>.ds{
+				width: 44vw;
+				height: 23vh;
+				position: absolute;
+				background: url(img/page4/朋友圈得瑟.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				top: 100vh;
+				left: 28vw;
+			}
+			.con4>.yhq{
+				width: 50vw;
+				height: 30vh;
+				position: absolute;
+				top: 30vh;
+				left: 25vw;
+				background: url(img/page4/优惠券.png);
+				background-size: 50vw 30vh;
+				z-index: -1;
+			}
+			.yhq>img{
+				position: absolute;
+				width: 38vw;
+				height: 14vh;
+				left: 6vw;
+				top: 8vh;
+			}
+			.con4>.gx{
+				width: 50vw;
+				height: 40vh;
+				background: url(img/page4/恭喜您！.png);
+				background-size: 50vw 40vh;
+				position: absolute;
+				top: 30vh;
+				left: 25vw;
+				z-index: -1;
+			}
+			.gx>.pd{
+				width: 34vw;
+				height: 5vh;
+				color: red;
+				position: absolute;
+				left: 8vw;
+				text-align: center;
+				font-size: 3vw;
+			}
+			.gx>.name{
+				width: 26vw;
+				position: absolute;
+				border-right: none;
+				border-top: none;
+				border-left: none;
+				left: 14.5vw;
+				top: 20vh;
+			}
+			.gx>.tel{
+				width: 26vw;
+				position: absolute;
+				border-right: none;
+				border-top: none;
+				border-left: none;
+				left: 14.5vw;
+				top: 23vh;
+			}
+			.gx>.adds{
+				position: absolute;
+				left: 14.5vw;
+				top: 26vh;
+			}
+			.gx>.tj{
+				position:absolute;
+				top: 35vh;
+				left: 37vw;
+				background: yellow;
+				color: red;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--loading-->
+		
+		<div class="wrap">
+			<a href="" id="a0"></a>
+			<div class="loading">
+				<div class="houzi"></div>
+				<p>0</p>
+				<p class="p1">loading...</p>
+			</div>
+			<!--page1-->
+			<div class="con1">
+				<img src="img/nfzmh.png" class="nfzmh"/>
+				<img src="img/page1/monkey.gif" class="monkey"/>
+				<img src="img/page1/xzs.png" class="xzs"/>
+			</div>
+			<div class="con2">
+				<img src="img/nfzmh.png" class="nfzmh"/>
+				<img src="img/page2/p2-西游知多少H5.png" class="go"/>
+			</div>
+			<div class="con3">
+				<p class="question">
+				</p>
+				<div class="icon"></div>
+				<div class="answer1">
+					<p class="answer"></p>
+					<p class="judge"></p>
+				</div>
+				<div class="answer2">
+					<p class="answer"></p>
+					<p class="judge"></p>
+				</div>
+				<div class="answer3">
+					<p class="answer"></p>
+					<p class="judge"></p>
+				</div>
+				<div class="answer4">
+					<p class="answer"></p>
+					<p class="judge"></p>
+				</div>
+			</div>
+			<div class="con4">
+				<img src="" class="defen"/>
+				<div class="f1"></div>
+				<div class="f2"></div>
+				<div class="f3"></div>
+				<div class="zw"></div>
+				<div class="hphy"></div>
+				<div class="cj"></div>
+				<div class="ds"></div>
+				<div class="yhq">
+					<img src=""/>
+				</div>
+				<div class="gx">
+					<p class="pd"></p>
+					<input type="text" class="name" />
+					<input type="text" class="tel"/>
+					<textarea class="adds" rows="3vh" cols="13vw"></textarea>
+					<input type="submit" class="tj" value="提交" />
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var loa = document.querySelector(".loading")
+		var loading = document.querySelector(".loading p")
+		var wrap = document.querySelector(".wrap")
+		var xzs = document.querySelector(".xzs")
+		var go = document.querySelector(".go")
+		var qs = document.querySelector(".question")
+		var ans = document.querySelectorAll(".answer")
+		var jg = document.querySelectorAll(".judge")
+		var ico = document.querySelector(".icon")
+		var imgd = document.querySelector(".defen")
+		var f = document.querySelectorAll(".con4>div")
+		var zw = document.querySelector(".zw")
+		var hphy = document.querySelector(".hphy")
+		var cj = document.querySelector(".cj")
+		var ds = document.querySelector(".ds")
+		var yhq = document.querySelector(".yhq")
+		var yhqi = document.querySelector(".yhq>img")
+		var gx = document.querySelector(".gx")
+		
+		var imgArr = ["img/icon/pic1.png","img/icon/pic2.png","img/icon/pic3.png","img/icon/pic4.png"
+		,"img/icon/pic5.png","img/icon/pic6.png","img/icon/pic7.png","img/icon/pic8.png","img/icon/pic9.png"
+		,"img/icon/pic10.png","img/icon/pic11.png","img/icon/pic12.png","img/icon/pic13.png","img/icon/pic14.png"
+		,"img/icon/pic15.png","img/icon/pic16.png","img/icon/pic17.png","img/icon/pic18.png","img/icon/pic19.png"
+		,"img/icon/pic20.png","img/icon/pic21.png","img/icon/pic22.png","img/icon/pic23.png","img/icon/pic24.png"
+		,"img/icon/pic25.png","img/icon/pic26.png","img/icon/pic27.png","img/icon/pic28.png","img/icon/pic29.png"
+		,"img/icon/pic30.png","img/loading/bg.png","img/loading/hou1.png","img/loading/hou2.png","img/loading/hou3.png"
+		,"img/nfzmh.png","img/page1/monkey.gif","img/page1/xzs.png","img/page2/p2-西游知多少H5.png","img/page1/背景1.jpg"
+		,"img/page2/背景.png","img/page3/提问背景.png","img/背景.JPEG","img/page4/再玩.png","img/page4/呼朋唤友.png"
+		,"img/page4/抽奖.png","img/page4/朋友圈得瑟.png","img/page4/优惠券.png","img/page4/恭喜您！.png","img/page3/yes.png"
+		,"img/page3/wrong.png","img/page4/减15.png","img/page4/减5.png","img/page4/遗憾.png","img/page4/称号.png"]
+		
+		load()
+		var count = 0//计数器
+		function load(){
+			for(var i = 0; i<imgArr.length; i++){
+				var newimg = new Image()
+				newimg.src = imgArr[i]
+				newimg.onload = function(){
+					count++
+					var bfb = parseInt(count/imgArr.length*100)+"%"
+					loading.innerText = bfb
+					
+					if(count == imgArr.length){
+						setTimeout(function(){
+//							location.hash = "a1"
+							wrap.style.top = -100 + "vh"
+						},100)
+					}
+				}
+			}
+		}
+		
+		
+		var timer,timer1,timer4,timer3,timer5
+		
+		xzs.addEventListener("click",function(e){
+			var e = e|window.event
+			
+			
+			wrap.style.top = -200 + "vh"
+			
+		},false)
+		go.addEventListener("click",function(e){
+			var e = e|window.event
+			clearTimeout(timer)
+			clearTimeout(timer1)
+			go.style.top = "71vh"
+			timer = setTimeout(function(){
+				
+				go.style.top = "70vh"
+				timer1 = setTimeout(function(){
+					wrap.style.top = -300 + "vh"
+					shuzu()
+				},300)
+			},300)
+			
+		},false)
+			
+			
+			
+		
+		//抽出十个问题放入一个数组中，打乱数组，再按顺序放入page3中
+		
+		function shuzu(){
+			zw.className = "zw"
+			hphy.style.left = "100vw"
+			cj.style.left = "100vw"
+			hphy.className = "hphy"
+			cj.className = "cj"
+			ds.style.top = "100vh"
+			ds.className = "ds"
+			yhq.style.zIndex = "-1"
+			gx.style.zIndex = "-1"
+			for(var i=0;i<4;i++){
+				jg[i].style.backgroundImage = ""
+			}
+			//从问题对象里抽出十个问题放入guessing数组里
+			var guessing = [],arr1 = [],arr2 = []
+			//分别随机长度为3个7个不想等的两个数组 ab为开关
+			var ran1,ran2,a=false,b=false
+			while(arr1.length<3){
+				ran1 = Math.floor(Math.random()*9)
+				for(var k=0;k<arr1.length;k++){
+					if(ran1 == arr1[k]){
+						a = true
+					}
+				}
+				if(!a){
+					arr1.push(ran1)
+				}
+				a = false
+			}
+			for(var i=0;i<arr1.length;i++){
+				guessing.push(questionList.brand[arr1[i]])
+			}
+			while(arr2.length<7){
+				ran2 = Math.floor(Math.random()*21)
+				for(var k=0;k<arr2.length;k++){
+					if(ran2 == arr2[k]){
+						b = true
+					}
+				}
+				if(!b){
+					arr2.push(ran2)
+				}
+				b = false
+			}
+			for(var i=0;i<arr2.length;i++){
+				guessing.push(questionList.xiyou[arr2[i]])
+			}
+			guessing.sort(function(){
+				return 0.5-Math.random()
+			})
+			var index = 0,defen=0
+			wenti()
+			function wenti(){
+				var sjxx = [],ran,c=false
+				
+				while(sjxx.length<4){
+					ran = Math.floor(Math.random()*4)
+					for(var k=0;k<sjxx.length;k++){
+						if(ran == sjxx[k]){
+							c = true
+						}
+					}
+					if(!c){
+						sjxx.push(ran)
+					}
+					c = false
+				}
+				qs.innerText = guessing[index].question
+				qs.style.fontSize = Math.pow(qs.offsetHeight*qs.offsetWidth/(guessing[index].question.length*1.5),0.5) + "px"
+				
+				ico.style.backgroundImage = "url(img/icon/pic" + guessing[index].icon + ".png)"
+				
+				ans[0].innerText = guessing[index].answer[sjxx[0]][0]
+				ans[1].innerText = guessing[index].answer[sjxx[1]][0]
+				ans[2].innerText = guessing[index].answer[sjxx[2]][0]
+				ans[3].innerText = guessing[index].answer[sjxx[3]][0]
+				for(var i=0;i<ans.length;i++){
+					if(guessing[index].answer[sjxx[0]][0].length<7){
+						ans[i].style.fontSize = 8 + "vw"
+						ans[i].style.lineHeight = "8vh"
+					}else if(guessing[index].answer[sjxx[0]][0].length>=7){
+						ans[i].style.fontSize = Math.pow(ans[i].offsetHeight*ans[i].offsetWidth/(guessing[index].answer[sjxx[0]][0].length*3),0.5) + "px"
+					}
+				}
+				var index1 = false
+				var arri = ["img/page4/减15.png","img/page4/减5.png"]
+				for(var i=0;i<4;i++){
+					(function(i){
+						ans[i].onclick = function(){
+							clearTimeout(timer3)
+//							console.log(guessing[index])
+							if(guessing[index].answer[sjxx[i]][1]==1){
+								jg[i].style.backgroundImage = "url(img/page3/yes.png)"
+								index1 = true
+							}else{
+								jg[i].style.backgroundImage = "url(img/page3/wrong.png)"
+							}
+							timer3 = setTimeout(function(){
+								index+=1
+								if(index1){
+									defen+=1
+								}
+								if(index<10){
+									jg[i].style.backgroundImage = ""
+									wenti()
+								}else{
+									wrap.style.top = -400 + "vh"
+									f[0].innerText = defen
+									f[1].innerText = defen
+									zw.className = "zw" + " animated bounceInLeft"
+									if(defen<7){
+										hphy.style.left = "55vw"
+										imgd.src = "img/page4/遗憾.png"
+										f[0].style.top = "31vh"
+										f[1].style.top = "31vh"
+										hphy.className = "hphy" + " animated bounceInRight"
+										
+									}else if(defen>=7){
+										ds.style.top = "77vh"
+										cj.style.left = "55vw"
+										f[0].style.top = "28.5vh"
+										f[1].style.top = "28.5vh"
+										imgd.src = "img/page4/称号.png"
+										f[2].innerText = defen
+										cj.className = "cj" + " animated bounceInRight"
+										ds.className = "ds" + " animated bounceInUp"
+										
+									}
+									zw.onclick = function(){
+										clearTimeout(timer4)
+										zw.className = "zw" + " animated pulse"
+										timer4 = setTimeout(function(){
+											zw.className = "zw"
+											wrap.style.top = -200 + "vh"
+											
+										},500)
+									}
+									cj.onclick = function(){
+										clearTimeout(timer5)
+										cj.className = "cj" + " animated pulse"
+										timer5 = setTimeout(function(){
+											cj.className = "cj"
+										},500)
+										yhq.style.zIndex = "1"
+										yhqi.src = arri[Math.floor(Math.random()*2)]
+									}
+									yhqi.onclick = function(){
+										yhq.style.zIndex = "-1"
+										gx.style.zIndex = "1"
+										hphy.style.left = "55vw"
+										ds.style.top = "100vh"
+										cj.style.left = "100vw"
+										$(".gx").slideToggle(function(){
+											$(".gx").slideToggle()
+										})
+									}
+								}
+							},500)
+						}
+					})(i)
+				}
+			}
+		}
+		$(".name").click(function(){
+			$(".pd")[0].innerText = ""
+			
+		})
+		$(".tel").click(function(){
+			$(".pd")[0].innerText = ""
+		})
+		$(".adds").click(function(){
+			$(".pd")[0].innerText = ""
+		})
+		$(".tj").click(function(){
+			
+			var reg1 = /^\D{2,}$/
+			var res1 = reg1.test($(".name")[0].value)
+			if(!res1){
+				$(".pd")[0].innerText = "请填写正确的姓名！"
+			}
+			var reg2 = /^(\+86|0)?1[3578][0-9]-?\d{4}-?\d{4}$/
+			var res2 = reg2.test($(".tel")[0].value)
+			if(!res2){
+				$(".pd")[0].innerText = "请填写正确的号码！"
+			}
+			var reg3 = /^\s+$/
+			var res3 = reg3.test($(".name")[0].value)
+			if(res3||$(".name")[0].value==""){
+				$(".pd")[0].innerText = "请填写姓名！"
+			}
+			var res4 = reg3.test($(".tel")[0].value)
+			if(res4||$(".tel")[0].value==""){
+				$(".pd")[0].innerText = "请填写电话！"
+			}
+			var res5 = reg3.test($(".adds")[0].innerText)
+			if(res5||$(".adds")[0].value==""){
+				$(".pd")[0].innerText = "请填写地址！"
+			}
+			if(res1 && res2 && !res3 && !$(".name")[0].value=="" && !res4 && !$(".tel")[0].value=="" && !res5 && !$(".adds")[0].value==""){
+				$(".pd")[0].innerText = "提交成功！请耐心等待"
+				$(".pd")[0].css({
+					color:"yellow",
+					fontWeight:"bolder"
+				})
+			}
+		})
+		
+		
+		
+var questionList = {
+    brand: [
+        {question: '“黑~芝麻糊~~~哎”,南方黑芝麻的经典广告片“叫卖篇”哪一年在电视上风靡全国？', answer:[["2046年",0],["1990年",0],["1991年",1],["1997年",0]],icon:22},
+        {question: '“南方黑芝麻”品牌发源地在哪里呢？', answer:[["南极",0],["南山南",0],["广西南宁",0],["广西容县",1]],icon:23},
+        {question: '砖家建议，一天吃多少克黑芝麻为宜？', answer:[["30-40g",0],["90-100g",0],["10-15g",1],["想吃多少吃多少",0]],icon:24},
+        {question: '下面不属于黑芝麻功能特性的是？', answer:[["抗衰老",0],["提高生育能力",0],["黑头发",0],["得道成仙",1]],icon:25},
+        {question: '100g黑芝麻的含钙量是100g牛奶含钙量的多少倍？', answer:[["100倍",0],["10倍",0],["7.5倍",1],["15倍",0]],icon:26},
+        {question: '南方黑芝麻糊2015年的最新广告片“音乐篇”中，翩翩起舞的女主角身穿什么颜色的裙子呢？', answer:[["黑色",0],["黄色",1],["蓝色",0],["粉色",0]],icon:27},
+        {question: '这是一道送分题，双12晚上，几点几分锁定浙江卫视可以看南到方黑芝麻糊冠名的《西游奇遇记》首播？', answer:[["20：20",1],["20：10",0],["20：00",0],["20：30",0]],icon:28},
+        {question: '南方黑芝麻糊冠名的《西游奇遇记》里金星老师扮演的是？', answer:[["白龙马",0],["女儿国国王",0],["太白金星",1],["观音菩萨",0]],icon:29},
+        {question: '南方黑芝麻糊冠名的《西游奇遇记》首站在哪里拍摄的？', answer:[["花果山",0],["西安",1],["火焰山",0],["北京",0]],icon:30}
+    ],
+    xiyou: [
+        {question: '牛魔王的老婆“铁扇公主”又名？', answer:[["小甜甜",0],["红佛女",0],["药叉女",0],["罗刹女",1]],icon:1},
+        {question: '八戒为什么长的像个猪？', answer:[["整容失败",0],["他本来就那模样",0],["投错了胎",1],["他喜欢猪，故意变成这样",0]],icon:2},
+        {question: '玉皇大帝和王母娘娘到底什么关系？', answer:[["夫妻",0],["母子",0],["同事",1],["不清不楚的关系",0]],icon:3},
+        {question: '黑熊精偷了唐僧的袈裟是为什么？', answer:[["别人的就是好的",0],["开生日趴体",1],["穿的拉轰、能泡妞",0],["金光闪闪，壕气",0]],icon:4},
+        {question: '二郎神和玉帝是什么关系？', answer:[["父子",0],["叔侄",1],["基友",0],["蓝朋友",0]],icon:5},
+        {question: '菩提始祖为什么轰走了孙悟空？', answer:[["猴子吃的太多",0],["猴子长的太帅",0],["猴子是逗逼",0],["猴子装逼",1]],icon:6},
+        {question: '白龙马是谁的儿子？', answer:[["东海龙王",0],["南海龙王",0],["北海龙王",0],["西海龙王",1]],icon:7},
+        {question: '通天河里的妖怪原本是观音菩萨池塘里的哪条鱼？', answer:[["鲤鱼",1],["鲶鱼",0],["金鱼",0],["金龙鱼",0]],icon:8},
+        {question: '孙悟空师从何处？', answer:[["唐僧",0],["菩提老祖",1],["自学成才",0],["太白金星",0]],icon:9},
+        {question: '西游记是谁写的？', answer:[["吴承恩",1],["吴奇隆",0],["吴孟达",0],["吴彦祖",0]],icon:10},
+        {question: '原著中的孙悟空和下面哪个明星身高最接近？', answer:[["郭敬明",1],["隔壁老王",0],["何炅",0],["黄晓明",0]],icon:11},
+        {question: '白龙马和被哪吒扒皮的龙三太子是什么关系？', answer:[["堂兄弟",1],["男朋友",0],["大舅舅",0],["好基友",0]],icon:12},
+        {question: '当年是哪个妖精先谣言“吃唐僧肉可长生不老”？', answer:[["黑熊怪",0],["蛇精男",0],["狮驼洞三怪",0],["金角大王",1]],icon:13},
+        {question: '要进盘丝洞，要先喊？', answer:[["傅文佩，你开门啊",0],["芝麻开门",1],["我是盘丝大仙",0],["妖精，哪里逃！",0]],icon:14},
+        {question: '猪八戒前身“天蓬元帅”在天庭任什么职？', answer:[["总政少将",0],["陆军军委",0],["海军总司令",1],["志愿兵",0]],icon:15},
+        {question: '红孩儿的真实年纪是？', answer:[["5岁",0],["300岁",1],["500岁",0],["100岁",0]],icon:16},
+        {question: '孙悟空大闹蟠桃会，变成谁的样子骗吃骗喝？', answer:[["王母娘娘",0],["赤脚大仙",1],["太上老君",0],["太白金星",0]],icon:17},
+        {question: '因为谁导致唐僧赶走孙悟空？', answer:[["孔雀公主",0],["白骨精",1],["狐狸精",0],["金鼻白毛鼠精",0]],icon:18},
+        {question: '下列人物中没有喝过“孙、八、僧”三人组的圣水的是？', answer:[["虎力大仙",0],["鹿力大仙",0],["羊力大仙",0],["牛力大仙",1]],icon:19},
+        {question: '第一个想娶唐僧的女妖怪是？', answer:[["凤姐",0],["琵琶精",1],["蝎子精",0],["玉兔精",0]],icon:20},
+        {question: '太上老君的御用炼丹炉童子是？', answer:[["青狮魔王&白象魔王&大鹏魔王&虎威魔王",0],["奔波儿灞&灞波儿奔",0],["金角大王&银角大王",1],["辟寒大王&辟暑大王&辟尘大王",0]],icon:21}
+    ]
+}
+		
+		
+		
+	</script>
+</html>
